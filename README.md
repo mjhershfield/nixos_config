@@ -3,8 +3,8 @@
 ## Setup
 ```sh
 cd
-git clone https://github.com/mjhershfield/system_configuration.git
-cd system_configuration
+git clone https://github.com/mjhershfield/nixos_config.git
+cd nixos_config
 sudo nixos-rebuild switch --flake ./#<configuration name here>
 ```
 
