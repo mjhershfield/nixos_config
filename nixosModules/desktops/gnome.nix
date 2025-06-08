@@ -25,13 +25,21 @@
 
     # Exclude GNOME packages
     environment.gnome.excludePackages = with pkgs; [
+      file-roller
       epiphany
+      evince
       gnome-system-monitor
       yelp
     ];
 
     # Add GNOME packages and extensions
     environment.systemPackages = with pkgs; [
+      eyedropper
+      gnome-decoder
+      gnome-network-displays
+      gnome-tweaks
+      livecaptions
+      papers
       resources
       smile
     ];
@@ -40,6 +48,8 @@
     services.xserver.excludePackages = with pkgs; [
       xterm
     ];
-    
+
+    # Enable screen rotation
+    hardware.sensor.iio.enable = true;    
   };
 }

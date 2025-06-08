@@ -41,10 +41,12 @@
         disable-user-extensions = false;
         enabled-extensions = [
           "blur-my-shell@aunetx"
-          "xremap@k0kubun.com" 
-          "clipboard-indicator@tudmotu.com" 
+          "xremap@k0kubun.com"
+          "clipboard-indicator@tudmotu.com"
           "AlphabeticalAppGrid@stuarthayhurst"
-          "trayIconsReloaded@selfmade.pl"
+          "appindicatorsupport@rgcjonas.gmail.com"
+          "smile-extension@mijorus.it"
+          "grand-theft-focus@zalckos.github.com"
         ];
       };
       
@@ -62,9 +64,11 @@
   
     home.packages = with pkgs; [
       gnomeExtensions.alphabetical-app-grid
+      gnomeExtensions.appindicator
       gnomeExtensions.blur-my-shell
       gnomeExtensions.clipboard-indicator
-      gnomeExtensions.tray-icons-reloaded
+      gnomeExtensions.grand-theft-focus
+      gnomeExtensions.smile-complementary-extension
       gnomeExtensions.xremap
     ];
 

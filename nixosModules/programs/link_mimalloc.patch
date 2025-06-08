@@ -1,0 +1,12 @@
+diff --git a/veridian-slang/build.rs b/veridian-slang/build.rs
+index d42c02d..d6308a9 100644
+--- a/veridian-slang/build.rs
++++ b/veridian-slang/build.rs
+@@ -103,6 +103,7 @@ fn main() -> Result<()> {
+     println!("cargo:rustc-link-lib={link_type}=svlang");
+     println!("cargo:rustc-link-lib=fmt");
+     println!("cargo:rustc-link-lib=dylib=stdc++");
++    println!("cargo:rustc-link-lib=mimalloc");
+ 
+     bindings
+         .write_to_file(out_dir.join("bindings.rs"))

@@ -11,7 +11,7 @@
     };
 
     environment.variables = {
-      FLAKE = "/home/matthew/nixos_config";
+      NH_FLAKE = "/home/matthew/nixos_config";
     };
   };
   

@@ -11,11 +11,14 @@
       bat
       bat-extras.batman
       delta
+      ghostty
+      viu
     ];
 
     environment.shellAliases = {
       rm = ''echo "Don't use rm! Use 'trash' or '/bin/rm'"'';
       man = "batman";
+      viu = "TERM=xterm-kitty viu";
     };
 
     # programs.bash = {

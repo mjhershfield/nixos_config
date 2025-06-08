@@ -26,7 +26,7 @@
   networking.networkmanager.enable = true;
 
   # Set your time zone.
-  time.timeZone = "America/New_York";
+  time.timeZone = "America/Los_Angeles";
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
@@ -45,7 +45,11 @@
 
   games.enable = true;
   gnome.enable = true;
+  kicad.enable = true;
+  quartus.enable = true;
+  vbox.enable = true;
   xilinx.enable = true;
+  zoom.enable = true;
     
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -57,7 +61,7 @@
   services.printing.enable = true;
 
   # Enable sound with pipewire.
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -74,6 +78,29 @@
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
+
+  # Enable power management with TLP
+  services.power-profiles-daemon.enable = false;
+  services.tlp = {
+    enable = true;
+    settings = {
+            CPU_SCALING_GOVERNOR_ON_AC = "powersave";
+            CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
+
+            CPU_ENERGY_PERF_POLICY_ON_BAT = "balance_power";
+            CPU_ENERGY_PERF_POLICY_ON_AC = "balance_power";
+
+            CPU_MIN_PERF_ON_AC = 0;
+            CPU_MAX_PERF_ON_AC = 100;
+            CPU_MIN_PERF_ON_BAT = 0;
+            CPU_MAX_PERF_ON_BAT = 20;
+
+           #Optional helps save long term battery health
+           # START_CHARGE_THRESH_BAT0 = 40; # 40 and below it starts to charge
+           # STOP_CHARGE_THRESH_BAT0 = 80; # 80 and above it stops charging
+
+    };
+  };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.matthew = {

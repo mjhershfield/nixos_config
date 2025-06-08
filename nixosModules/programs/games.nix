@@ -8,6 +8,8 @@
   config = lib.mkIf config.games.enable {
     environment.systemPackages = with pkgs; [
       bottles
+      prismlauncher
+      wine
     ];
 
     programs.steam = {
